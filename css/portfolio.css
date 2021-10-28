@@ -1,0 +1,2275 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  width: 100%;
+}
+
+main {
+  padding-top: 70px;
+}
+
+body {
+  background-color: #EDEDED;
+}
+
+/*!
+ * ress.css • v4.0.0
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+     # General elements
+     # ================================================================= */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+  height: 0;
+  /* Add the correct box sizing in Firefox */
+  color: inherit;
+  /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block;
+  /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none;
+  /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em;
+  /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit;
+  /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0;
+  /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+/* # =================================================================
+     # Forms
+     # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+  /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'],
+[role='button'] {
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* # =================================================================
+     # Specify media element style
+     # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+     # Accessibility
+     # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy='true'] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled='true'] {
+  cursor: default;
+}
+
+.l-header {
+  position: relative;
+  background-image: url(../img/top.jpeg);
+  min-height: 100vh;
+  background-position: center top;
+  background-size: cover;
+}
+
+.l-header__nav {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: #101841;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.l-header__nav--open {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  z-index: 99;
+  background-color: #101841;
+}
+
+.l-header__nav__list {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.l-header--single::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 103px;
+  background-color: #101841;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.l-hamburgerbtn--close {
+  display: block;
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  right: 0;
+  cursor: pointer;
+  /*カーソルリンクポインター*/
+  z-index: 100;
+}
+
+.l-hamburgerbtn-1 {
+  position: absolute;
+  left: 15px;
+  background-color: #101841;
+  width: 40px;
+  height: 3px;
+  top: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.l-hamburgerbtn-2 {
+  position: absolute;
+  left: 15px;
+  background-color: #101841;
+  width: 40px;
+  height: 3px;
+  top: 35px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.l-hamburgerbtn-3 {
+  position: absolute;
+  left: 15px;
+  background-color: #101841;
+  width: 40px;
+  height: 3px;
+  top: 50px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.l-hamburgerbtn--open {
+  background-color: #101841;
+  position: fixed;
+  right: 0;
+  z-index: 100;
+}
+
+.l-hamburgerbtn--open .l-hamburgerbtn-1 {
+  top: 35px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #EDEDED;
+}
+
+.l-hamburgerbtn--open .l-hamburgerbtn-2 {
+  display: none;
+}
+
+.l-hamburgerbtn--open .l-hamburgerbtn-3 {
+  top: 35px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  background-color: #EDEDED;
+}
+
+.l-content__waraper {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@media screen and (min-width: 600px) {
+  .l-content__waraper {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-content__waraper {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+.l-content__img--skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 50px;
+  margin-bottom: 70px;
+}
+
+@media screen and (min-width: 600px) {
+  .l-content__img--skills {
+    -webkit-column-gap: 18px;
+            column-gap: 18px;
+    row-gap: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-content__img--skills {
+    -webkit-column-gap: 35px;
+            column-gap: 35px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .l-content--about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.l-footer {
+  height: 150px;
+  background-color: #101841;
+}
+
+.l-footer__nav {
+  text-align: center;
+}
+
+.l-footer__nav__list {
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.l-contactform {
+  margin-top: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-contactform__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-button--contact {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+  height: 66px;
+  margin: 25px auto;
+}
+
+@media screen and (min-width: 600px) {
+  .c-button--contact {
+    max-width: 1000px;
+  }
+}
+
+.c-button--contact a p {
+  color: #EDEDED;
+  font-family: BIZ UDP明朝;
+  font-size: 20px;
+}
+
+.c-button--contact:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.c-button--details--site {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+  height: 59px;
+  width: 170px;
+  margin: 25px auto;
+}
+
+.c-button--details--site a p {
+  color: #EDEDED;
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+}
+
+.c-button--details--code {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+  height: 59px;
+  width: 170px;
+  margin: 25px auto;
+}
+
+.c-button--details--code a p {
+  color: #EDEDED;
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+}
+
+.c-button--details--site:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.c-button--details--code:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.c-button--contactform {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+  margin: 32px auto 70px auto;
+  height: 59px;
+  width: 170px;
+  color: #EDEDED;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  font-size: 20px;
+}
+
+.c-button--contactform:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.c-icon--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
+.c-icon--contact--twitter {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-icon--contact .fa-twitter {
+  color: #55ACEE;
+}
+
+.c-icon--contact--facebook {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 15.5px;
+  margin-right: 15.5px;
+}
+
+@media screen and (min-width: 600px) {
+  .c-icon--contact--facebook {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .c-icon--contact--facebook {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+.c-icon--contact .fa-facebook {
+  color: #3B5998;
+}
+
+.c-icon--contact--github {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-icon--contact .fa-github {
+  color: #000000;
+}
+
+.c-icon--contact .fab {
+  padding: 20px;
+}
+
+.c-icon--contact--twitter:hover {
+  opacity: 0.7;
+}
+
+.c-icon--contact--facebook:hover {
+  opacity: 0.7;
+}
+
+.c-icon--contact--github:hover {
+  opacity: 0.7;
+}
+
+.p-header__nav__list--works > a {
+  color: #EDEDED;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--works > a {
+    font-size: 30px;
+  }
+}
+
+.p-header__nav__list--works {
+  height: 60px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--works {
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+
+.p-header__nav__list--skills > a {
+  color: #EDEDED;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--skills > a {
+    font-size: 30px;
+  }
+}
+
+.p-header__nav__list--skills {
+  height: 60px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--skills {
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+
+.p-header__nav__list--about > a {
+  color: #EDEDED;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--about > a {
+    font-size: 30px;
+  }
+}
+
+.p-header__nav__list--about {
+  height: 60px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--about {
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+
+.p-header__nav__list--price > a {
+  color: #EDEDED;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--price > a {
+    font-size: 30px;
+  }
+}
+
+.p-header__nav__list--price {
+  height: 60px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--price {
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+
+.p-header__nav__list--contact > a {
+  color: #EDEDED;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--contact > a {
+    font-size: 30px;
+  }
+}
+
+.p-header__nav__list--contact {
+  height: 60px;
+  text-align: center;
+  padding-top: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__nav__list--contact {
+    height: 100px;
+    padding-top: 35px;
+  }
+}
+
+.p-header__nav__list--works:hover {
+  background-color: #EDEDED;
+}
+
+.p-header__nav__list--works:hover a {
+  color: #101841;
+}
+
+.p-header__nav__list--skills:hover {
+  background-color: #EDEDED;
+}
+
+.p-header__nav__list--skills:hover a {
+  color: #101841;
+}
+
+.p-header__nav__list--about:hover {
+  background-color: #EDEDED;
+}
+
+.p-header__nav__list--about:hover a {
+  color: #101841;
+}
+
+.p-header__nav__list--price:hover {
+  background-color: #EDEDED;
+}
+
+.p-header__nav__list--price:hover a {
+  color: #101841;
+}
+
+.p-header__nav__list--contact:hover {
+  background-color: #EDEDED;
+}
+
+.p-header__nav__list--contact:hover a {
+  color: #101841;
+}
+
+.p-header__title {
+  position: absolute;
+  text-align: center;
+  color: #EDEDED;
+  font-size: 100px;
+  font-family: Sitka Heading;
+  line-height: 0.4;
+  top: 30vh;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__title {
+    font-size: 120px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-header__title {
+    font-size: 150px;
+  }
+}
+
+.p-header__subtitle {
+  position: absolute;
+  top: 45vh;
+  color: #EDEDED;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .p-header__subtitle {
+    font-size: 30px;
+    top: 50vh;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-header__subtitle {
+    font-size: 40px;
+    top: 55vh;
+  }
+}
+
+.p-header__title--single {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  color: #EDEDED;
+  position: absolute;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  line-height: 0.85;
+}
+
+.p-content--works {
+  margin-top: 40px;
+}
+
+.p-content--works__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--works__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.p-content--works--raisetech {
+  position: relative;
+}
+
+.p-content--works--raisetech__img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--raisetech__img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--raisetech__img {
+    max-width: 800px;
+  }
+}
+
+.p-content--works--raisetech__mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* マスクを表示しない */
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--raisetech__mask {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--raisetech__mask {
+    max-width: 800px;
+  }
+}
+
+.p-content--works--raisetech__title {
+  color: #fff;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 30px;
+  position: absolute;
+  top: 15vh;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--raisetech__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--raisetech__title {
+    font-size: 60px;
+  }
+}
+
+.p-content--works--hamburgermenu {
+  margin-top: 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--hamburgermenu {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--hamburgermenu {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+
+.p-content--works--hamburgermenu__img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--hamburgermenu__img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--hamburgermenu__img {
+    max-width: 800px;
+  }
+}
+
+.p-content--works--hamburgermenu__mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* マスクを表示しない */
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--hamburgermenu__mask {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--hamburgermenu__mask {
+    max-width: 800px;
+  }
+}
+
+.p-content--works--hamburgermenu__title {
+  color: #fff;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 30px;
+  position: absolute;
+  top: 15vh;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--works--hamburgermenu__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--works--hamburgermenu__title {
+    font-size: 60px;
+  }
+}
+
+.p-content--works--raisetech:hover .p-content--works--raisetech__mask {
+  opacity: 1;
+}
+
+.p-content--works--hamburgermenu:hover .p-content--works--hamburgermenu__mask {
+  opacity: 1;
+}
+
+.p-content--skills {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills {
+    margin-top: 100px;
+  }
+}
+
+.p-content--skills__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--skills__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.p-content--skills--html {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--html {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--html {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--html__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--html__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--css {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--css {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--css {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--css__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--css__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--sass {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--sass {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--sass {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--sass__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--sass__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--cssdesign {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--cssdesign {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--cssdesign {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--cssdesign__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--cssdesign__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--wordpress {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--wordpress {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--wordpress {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--wordpress__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--wordpress__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--git {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--git {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--git {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--git__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--git__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills--js {
+  width: 75px;
+  height: 97.5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--js {
+    width: 110px;
+    height: 143px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills--js {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.p-content--skills--js__title {
+  color: #101841;
+  text-align: center;
+  font-family: Sitka Heading,BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--skills--js__title {
+    font-size: 30px;
+  }
+}
+
+.p-content--skills__text {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--skills__text {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.p-content--about {
+  margin-top: 40px;
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--about {
+    margin-top: 100px;
+  }
+}
+
+.p-content--about__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--about__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--about__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--about__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.p-content--about__img {
+  cursor: pointer;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about__img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.p-content--about__profile {
+  font-size: 20px;
+  color: #101841;
+  font-family: Sitka Heading;
+  font-weight: bold;
+  margin-top: -105px;
+  right: 0;
+  position: absolute;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about__profile {
+    padding-top: 50%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--about__profile {
+    font-size: 30px;
+    padding-top: 45%;
+  }
+}
+
+.p-content--about__text {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--about__text {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--about__text {
+    padding-left: 30px;
+    margin-top: 50px;
+    overflow: hidden;
+  }
+}
+
+.p-content--about:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+}
+
+.p-content--price {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--price {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--price {
+    margin-top: 100px;
+  }
+}
+
+.p-content--price__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--price__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--price__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--price__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--price__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--price__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.p-content--pricetable--coding {
+  text-align: center;
+}
+
+.p-content--pricetable--coding h4 {
+  font-size: 20px;
+  color: #101841;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--pricetable--coding h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--coding h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+.p-content--pricetable--coding p {
+  font-size: 16px;
+  color: #101841;
+  font-family: BIZ UDP明朝,Sitka Heading;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #101841;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--pricetable--coding p {
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--coding p {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+.p-content--pricetable--wordpress {
+  text-align: center;
+}
+
+.p-content--pricetable--wordpress h4 {
+  font-size: 20px;
+  color: #101841;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--pricetable--wordpress h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--wordpress h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+.p-content--pricetable--wordpress p {
+  font-size: 16px;
+  color: #101841;
+  font-family: BIZ UDP明朝,Sitka Heading;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #101841;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--pricetable--wordpress p {
+    font-size: 20px;
+    margin-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--wordpress p {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+.p-content--pricetable--note p {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--note p {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.p-content--contact {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--contact {
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--contact {
+    margin-top: 100px;
+    margin-bottom: 90px;
+  }
+}
+
+.p-content--contact__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--contact__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--contact__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--contact__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--contact__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--contact__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.p-content--contact__text {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+  text-align: center;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--contact__text {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.p-content--single__title {
+  text-align: center;
+  font-family: Sitka Heading;
+  font-size: 40px;
+  font-weight: bold;
+  color: #101841;
+  border-bottom: 1px  solid #101841;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single__title {
+    font-size: 80px;
+  }
+}
+
+.p-content--single__subtitle {
+  text-align: center;
+  font-family: BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+  color: #101841;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single__subtitle {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single__subtitle {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+}
+
+.p-content--single--size {
+  margin-bottom: 50px;
+}
+
+.p-content--single--size .p-content--single--pc {
+  text-align: center;
+}
+
+.p-content--single--size .p-content--single--pc__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--pc__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--pc__title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--pc__title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--pc__title {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-content--single--size .p-content--single--pc__img {
+  max-width: 745px;
+  max-height: 381px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.p-content--single--size .p-content--single--ipad {
+  text-align: center;
+}
+
+.p-content--single--size .p-content--single--ipad__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--ipad__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--ipad__title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--ipad__title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--ipad__title {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-content--single--size .p-content--single--ipad__img {
+  max-width: 600px;
+  max-height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.p-content--single--size .p-content--single--iphone {
+  text-align: center;
+}
+
+.p-content--single--size .p-content--single--iphone__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--iphone__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--iphone__title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--size .p-content--single--iphone__title {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--size .p-content--single--iphone__title {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-content--single--size .p-content--single--iphone__img {
+  max-width: 300px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.p-content--single--details {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--details {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--details {
+    margin-bottom: 90px;
+  }
+}
+
+.p-content--single--details__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--details__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--details__title {
+    font-size: 70px;
+  }
+}
+
+.p-content--single--details__subtitle {
+  text-align: center;
+  color: #144DA0;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--single--details__subtitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--details__subtitle {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+.p-content--single--details__text span {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--details__text span {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.p-content--single--details__text {
+  font-family: BIZ UDP明朝;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--single--details__text {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.p-content--page__title {
+  text-align: center;
+  font-family: Sitka Heading;
+  font-size: 40px;
+  font-weight: bold;
+  color: #101841;
+  border-bottom: 1px  solid #101841;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--page__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--page__title {
+    font-size: 80px;
+  }
+}
+
+.p-content--page__subtitle {
+  text-align: center;
+  font-family: BIZ UDP明朝;
+  font-size: 20px;
+  font-weight: bold;
+  color: #101841;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  .p-content--page__subtitle {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--page__subtitle {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+}
+
+.p-footer__nav--home > a {
+  color: #EDEDED;
+  font-family: Sitka Heading;
+  font-size: 16px;
+}
+
+.p-footer__nav--contact > a {
+  color: #EDEDED;
+  font-family: Sitka Heading;
+  font-size: 16px;
+}
+
+.p-footer__copyright {
+  color: #EDEDED;
+  font-family: Sitka Heading;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 37px;
+}
+
+.p-contactform {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.p-contactform__item__label {
+  width: 100%;
+  max-width: 250px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: BIZ UDP明朝;
+  color: #101841;
+  text-align: initial;
+}
+
+.p-contactform__item__label--required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #144DA0;
+  color: #EDEDED;
+  font-size: 14px;
+}
+
+.p-contactform__item__input {
+  border: 1px solid #101841;
+  border-radius: 6px;
+  height: 30px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.p-contactform__item__textarea {
+  border: 1px solid #101841;
+  border-radius: 6px;
+  height: 200px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=style.css.map */
