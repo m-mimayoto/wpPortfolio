@@ -1,0 +1,114 @@
+.p-header__nav__list{
+
+    &--works>a{
+        @include header-nav-a;
+    }
+    &--works{
+       @include header-nav;
+    }
+    &--skills>a{
+       @include header-nav-a;
+    }
+    &--skills{
+        @include header-nav;
+    }
+    &--about>a{
+        @include header-nav-a;
+    }
+    &--about{
+        @include header-nav;
+
+    }
+    &--price>a{
+        @include header-nav-a;
+    }
+    &--price{
+        @include header-nav;
+
+    }
+    &--contact>a{
+        @include header-nav-a;
+    }
+    &--contact{
+        @include header-nav;
+    }
+}
+.p-header__nav__list--works:hover{
+    background-color: #EDEDED;
+}
+.p-header__nav__list--works:hover a{
+    color: #101841;
+}
+.p-header__nav__list--skills:hover{
+    background-color: #EDEDED;
+}
+.p-header__nav__list--skills:hover a{
+    color: #101841;
+}
+.p-header__nav__list--about:hover{
+    background-color: #EDEDED;
+}
+.p-header__nav__list--about:hover a{
+    color: #101841;
+}
+.p-header__nav__list--price:hover{
+    background-color: #EDEDED;
+}
+.p-header__nav__list--price:hover a{
+    color: #101841;
+}
+.p-header__nav__list--contact:hover{
+    background-color: #EDEDED;
+}
+.p-header__nav__list--contact:hover a{
+    color: #101841;
+}
+
+
+.p-header__title{
+    position: absolute;
+    text-align: center;
+    color:#EDEDED;
+    font-size: 100px;
+    font-family: Sitka Heading;
+    line-height: 0.4;
+    top:30vh;
+
+    @media screen and (min-width : 600px){
+        font-size: 120px;
+    }
+    @media screen and (min-width : 1025px){
+        font-size: 150px;
+    }
+}
+.p-header__subtitle{
+    position: absolute;
+    top:45vh;
+    color:#EDEDED;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Sitka Heading;
+    text-align: center;
+
+    @media screen and (min-width : 600px){
+        font-size: 30px;
+        top:50vh;
+    }
+    @media screen and (min-width : 1025px){
+        font-size: 40px;
+        top:55vh;
+    }
+}
+
+
+.p-header__title--single{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Sitka Heading;
+    color: #EDEDED;
+    position: absolute;
+    width: 200px;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 0.85;
+}

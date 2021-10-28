@@ -1,0 +1,368 @@
+.p-content--works{
+    margin-top: 40px;
+
+    &__title{
+        @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+
+    &__flex{
+        @media screen and (min-width : 1025px){
+            display: flex;
+        }
+    }
+
+    &--raisetech{
+        position: relative;
+
+        &__img{
+            @include works-img;
+        }
+        &__mask{
+            @include works-mask;
+        }
+        &__title{
+            @include works-title;
+        }
+    }
+
+    &--hamburgermenu{
+        margin-top: 20px;
+        position: relative;
+
+        @media screen and (min-width : 600px){
+            margin-top: 40px;
+        }
+        @media screen and (min-width : 1025px){
+            margin-top: 0;
+            margin-left: 40px;
+        }
+
+        &__img{
+            @include works-img;
+        }
+        &__mask{
+            @include works-mask;
+        }
+        &__title{
+            @include works-title;
+        }
+    }
+}
+.p-content--works--raisetech:hover .p-content--works--raisetech__mask{
+    opacity: 1;
+}
+.p-content--works--hamburgermenu:hover .p-content--works--hamburgermenu__mask{
+    opacity: 1;
+}
+
+
+.p-content--skills{
+    margin-top: 40px;
+    @media screen and (min-width : 600px){
+        margin-top: 80px;
+    }
+    @media screen and (min-width : 1025px){
+        margin-top: 100px;
+    }
+
+    &__title{
+        @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+
+        &--html{
+           @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--css{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--sass{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--cssdesign{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--wordpress{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--git{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &--js{
+            @include skills;
+            &__title{
+                @include skills-title;
+            }
+        }
+        &__text{
+            @include text;
+        }
+}
+
+.p-content--about{
+    margin-top: 40px;
+    position: relative;
+    
+    @media screen and (min-width : 600px){
+        margin-top: 80px;
+    }
+    @media screen and (min-width : 1025px){
+        margin-top: 100px;
+    }
+
+    &__title{
+        @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+    &__img{
+        cursor: pointer;
+        filter: grayscale(100%);
+        @media screen and (min-width : 600px){
+            width: 50%;
+            height: 50%;
+        }
+    }
+    &__profile{
+        font-size: 20px;
+        color: #101841;
+        font-family: Sitka Heading;
+        font-weight: bold;
+        margin-top: -105px;
+        right: 0;
+        position: absolute;
+
+        @media screen and (min-width : 600px){
+            padding-top: 50%;
+        }
+        @media screen and (min-width : 1025px){
+            font-size: 30px;
+            padding-top: 45%;
+        }
+    }
+    &__text{
+        @include text;
+        margin-top: 20px;
+
+        @media screen and (min-width : 600px){
+            padding-left: 30px;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+    }
+}
+
+.p-content--about:hover img{
+    filter: grayscale(0%);
+    transition: filter .5s;
+}
+
+.p-content--price{
+    margin-top: 40px;
+
+    @media screen and (min-width : 600px){
+        margin-top: 80px;
+    }
+    @media screen and (min-width : 1025px){
+        margin-top: 100px;
+    }
+
+    &__title{
+        @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+}
+
+.p-content--pricetable{
+    &--coding{
+        text-align: center;
+
+        h4{
+            @include pricetable-title;
+        }
+        p{
+            @include pricetable-text;
+        }
+    }
+    &--wordpress{
+        text-align: center;
+
+        h4{
+            @include pricetable-title;
+        }
+        p{
+            @include pricetable-text;
+        }
+    }
+    &--note{
+        p{
+           @include text;
+        }
+    }
+}
+
+.p-content--contact{
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width : 600px){
+        margin-top: 80px;
+        margin-bottom: 70px;
+    }
+    @media screen and (min-width : 1025px){
+        margin-top: 100px;
+        margin-bottom: 90px;
+    }
+
+    &__title{
+        @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+    &__text{
+        @include text;
+        text-align: center;
+    }
+}
+
+.p-content--single{
+    &__title{
+       @include title2;
+    }
+    &__subtitle{
+        @include subtitle2;
+    }
+}
+.p-content--single--size{
+    margin-bottom: 50px;
+    .p-content--single--pc{
+        text-align: center;
+        &__title{
+            @include title;
+            margin-top: 35px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width : 600px){
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+            @media screen and (min-width : 1025px){
+                margin-top: 100px;
+                margin-bottom: 40px;
+            }
+        }
+        &__img{
+            max-width: 745px;
+            max-height: 381px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    .p-content--single--ipad{
+        text-align: center;
+        &__title{
+            @include title;
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width : 600px){
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+            @media screen and (min-width : 1025px){
+                margin-top: 100px;
+                margin-bottom: 40px;
+            }
+        }
+        &__img{
+            max-width: 600px;
+            max-height: 650px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    .p-content--single--iphone{
+        text-align: center;
+        &__title{
+            @include title;
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width : 600px){
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+            @media screen and (min-width : 1025px){
+                margin-top: 100px;
+                margin-bottom: 40px;
+            }
+        }
+        &__img{
+            max-width: 300px;
+            max-height: 600px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+.p-content--single--details{
+    margin-bottom: 50px;
+
+    @media screen and (min-width : 600px){
+        margin-bottom: 70px;
+    }
+    @media screen and (min-width : 1025px){
+        margin-bottom: 90px;
+    }
+
+    &__title{
+       @include title;
+    }
+    &__subtitle{
+        @include subtitle;
+    }
+    &__text span{
+        @include text;
+        font-weight: bold;
+    }
+    &__text{
+        @include text;
+    }
+}
+
+.p-content--page{
+    &__title{
+       @include title2;
+    }
+    &__subtitle{
+        @include subtitle2;
+    }
+}

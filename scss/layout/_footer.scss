@@ -1,0 +1,17 @@
+.l-footer{
+    height: 150px;
+    background-color: #101841;
+
+    &__nav{
+        text-align: center;
+
+        &__list{
+            width: 130px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+    }
+}

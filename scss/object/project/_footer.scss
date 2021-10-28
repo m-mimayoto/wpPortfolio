@@ -1,0 +1,17 @@
+.p-footer{
+    &__nav{
+        &--home>a{
+           @include footer;
+        }
+
+        &--contact>a{
+           @include footer;
+        }
+    }
+
+    &__copyright{
+        @include footer;
+        text-align: center;
+        margin-top: 37px;
+    }
+}
