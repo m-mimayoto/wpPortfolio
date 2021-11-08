@@ -8,7 +8,7 @@
             <section id="post-<?php the_ID(); ?>" <?php post_class('p-top'); ?>>
 
             <h2 class="p-content--page__title"><?php the_title(); ?></h2>
-            <h3 class="p-content--page__subtitle"><?php echo($post->post_name); ?></h3>
+            <!--<h3 class="p-content--page__subtitle"></h3>-->
             <?php the_post_thumbnail(); ?>
             </section>
             <?php the_content(); ?> 
