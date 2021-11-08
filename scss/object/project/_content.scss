@@ -117,8 +117,13 @@
                 @include skills-title;
             }
         }
-        &__text{
-            @include text;
+        &__textbox{
+            max-width: 1100px;
+            margin: auto;
+            
+            >p{
+                @include text;
+            }
         }
 }
 
@@ -142,36 +147,18 @@
     &__img{
         cursor: pointer;
         filter: grayscale(100%);
+        border-radius:50%;
         @media screen and (min-width : 600px){
             width: 50%;
             height: 50%;
         }
     }
     &__profile{
-        font-size: 20px;
-        color: #101841;
-        font-family: Sitka Heading;
-        font-weight: bold;
-        margin-top: -105px;
-        right: 0;
-        position: absolute;
-
-        @media screen and (min-width : 600px){
-            padding-top: 50%;
-        }
-        @media screen and (min-width : 1025px){
-            font-size: 30px;
-            padding-top: 45%;
-        }
-    }
-    &__text{
         @include text;
-        margin-top: 20px;
-
+        
         @media screen and (min-width : 600px){
-            padding-left: 30px;
-            margin-top: 50px;
             overflow: hidden;
+            margin-left: 20px;
         }
     }
 }
@@ -221,6 +208,13 @@
         }
     }
     &--note{
+        @media screen and (min-width : 600px){
+            max-width: 525px;
+            margin: auto;
+        }
+        @media screen and (min-width : 1025px){
+            max-width: 745px;
+        }
         p{
            @include text;
         }

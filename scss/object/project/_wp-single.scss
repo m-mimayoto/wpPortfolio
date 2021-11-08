@@ -1,0 +1,72 @@
+//worksの個別ページ//
+
+.wp-single{
+    &__img{
+        margin-top: 40px;
+
+        img{
+            object-fit: cover;
+            object-position: top;
+            height: 50%;
+        }
+    }
+    &__details{
+        margin-top: 40px;
+        margin-bottom: 50px;
+        @media screen and (min-width : 600px){
+            margin-top: 80px;
+            margin-bottom: 70px;
+        }
+        @media screen and (min-width : 1025px){
+            margin-top: 100px;
+            margin-bottom: 90px;
+        }
+
+        &__title{
+            @include title;
+            margin-bottom: 20px;
+
+            @media screen and (min-width : 600px){
+                margin-bottom: 40px;
+            }
+            @media screen and (min-width : 1025px){
+                margin-bottom: 80px;
+            }
+        }
+
+        &__content{
+            max-width: 430px;
+            margin: auto;
+            @media screen and (min-width : 600px){
+                max-width: 590px;
+            }
+            @media screen and (min-width : 1025px){
+               max-width: 920px;
+            }
+        }
+
+        &__text{
+            @include text;
+            font-weight: bold;
+        }
+        &__textbox{
+            @include text;
+        }
+
+        &__button a{
+            @include button;
+        }
+
+        &__buttons{
+            @media screen and (min-width : 600px){
+                display: flex;
+                flex-wrap: inherit;
+                max-width: 540px;
+                margin: auto;
+            }
+            @media screen and (min-width : 1025px){
+                max-width: 745px;
+            }
+        }
+    }
+}

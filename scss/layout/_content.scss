@@ -28,8 +28,13 @@
     }
 }
 
-@media screen and (min-width : 600px){
     .l-content--about{
-        display: flex;
+        @media screen and (min-width : 600px){
+            display: flex;
+            max-width: 685px;
+            margin: auto;
+        }
+        @media screen and (min-width : 1025px){
+            max-width: 905px;
+        }
     }
-}

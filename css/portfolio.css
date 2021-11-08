@@ -383,7 +383,7 @@ progress {
   top: 0;
   left: 0;
   width: 100%;
-  height: 103px;
+  height: 130px;
   background-color: #101841;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
@@ -510,6 +510,14 @@ progress {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 685px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-content--about {
+    max-width: 905px;
   }
 }
 
@@ -656,6 +664,26 @@ progress {
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   border-bottom: none;
+}
+
+.btn-send {
+  margin-top: 17px;
+}
+
+.btn-back {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+  margin: 32px auto 70px auto;
+  height: 59px;
+  width: 170px;
+  color: #EDEDED;
+  font-weight: bold;
+  font-family: BIZ UDP明朝;
+  font-size: 20px;
 }
 
 .c-icon--contact {
@@ -1044,6 +1072,7 @@ progress {
 @media screen and (min-width: 1025px) {
   .p-content--works--raisetech__img {
     max-width: 800px;
+    padding: 15px;
   }
 }
 
@@ -1129,6 +1158,7 @@ progress {
 @media screen and (min-width: 1025px) {
   .p-content--works--hamburgermenu__img {
     max-width: 800px;
+    padding: 15px;
   }
 }
 
@@ -1489,15 +1519,20 @@ progress {
   }
 }
 
-.p-content--skills__text {
-  font-family: BIZ UDP明朝;
+.p-content--skills__textbox {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.p-content--skills__textbox > p {
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
 }
 
 @media screen and (min-width: 1025px) {
-  .p-content--skills__text {
+  .p-content--skills__textbox > p {
     font-size: 20px;
     line-height: 2;
   }
@@ -1566,6 +1601,7 @@ progress {
   cursor: pointer;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 600px) {
@@ -1576,48 +1612,23 @@ progress {
 }
 
 .p-content--about__profile {
-  font-size: 20px;
-  color: #101841;
-  font-family: Sitka Heading;
-  font-weight: bold;
-  margin-top: -105px;
-  right: 0;
-  position: absolute;
-}
-
-@media screen and (min-width: 600px) {
-  .p-content--about__profile {
-    padding-top: 50%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .p-content--about__profile {
-    font-size: 30px;
-    padding-top: 45%;
-  }
-}
-
-.p-content--about__text {
-  font-family: BIZ UDP明朝;
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
-  margin-top: 20px;
 }
 
 @media screen and (min-width: 1025px) {
-  .p-content--about__text {
+  .p-content--about__profile {
     font-size: 20px;
     line-height: 2;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .p-content--about__text {
-    padding-left: 30px;
-    margin-top: 50px;
+  .p-content--about__profile {
     overflow: hidden;
+    margin-left: 20px;
   }
 }
 
@@ -1724,13 +1735,16 @@ progress {
 
 @media screen and (min-width: 600px) {
   .p-content--pricetable--coding p {
+    max-width: 450px;
     font-size: 20px;
+    margin: auto;
     margin-bottom: 23px;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .p-content--pricetable--coding p {
+    max-width: 650px;
     font-size: 30px;
     margin-bottom: 50px;
   }
@@ -1772,20 +1786,36 @@ progress {
 
 @media screen and (min-width: 600px) {
   .p-content--pricetable--wordpress p {
+    max-width: 450px;
     font-size: 20px;
+    margin: auto;
     margin-bottom: 23px;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .p-content--pricetable--wordpress p {
+    max-width: 650px;
     font-size: 30px;
     margin-bottom: 50px;
   }
 }
 
+@media screen and (min-width: 600px) {
+  .p-content--pricetable--note {
+    max-width: 525px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .p-content--pricetable--note {
+    max-width: 745px;
+  }
+}
+
 .p-content--pricetable--note p {
-  font-family: BIZ UDP明朝;
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
@@ -1860,7 +1890,7 @@ progress {
 }
 
 .p-content--contact__text {
-  font-family: BIZ UDP明朝;
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
@@ -2129,7 +2159,7 @@ progress {
 }
 
 .p-content--single--details__text span {
-  font-family: BIZ UDP明朝;
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
@@ -2144,7 +2174,7 @@ progress {
 }
 
 .p-content--single--details__text {
-  font-family: BIZ UDP明朝;
+  font-family: BIZ UDP明朝,Sitka Heading;
   font-size: 16px;
   color: #101841;
   line-height: 1.875;
@@ -2272,4 +2302,216 @@ progress {
   font-size: 18px;
   margin-top: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.nav_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-item > a {
+  color: #EDEDED;
+  font-family: Sitka Heading;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1025px) {
+  figure {
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+figure a img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  figure a img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  figure a img {
+    max-width: 800px;
+    padding: 15px;
+  }
+}
+
+.post-categories li {
+  text-align: center;
+}
+
+.post-categories li a {
+  font-family: BIZ UDP明朝,Sitka Heading;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1025px) {
+  .post-categories li a {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.wp-single__img {
+  margin-top: 40px;
+}
+
+.wp-single__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 50%;
+}
+
+.wp-single__details {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .wp-single__details {
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details {
+    margin-top: 100px;
+    margin-bottom: 90px;
+  }
+}
+
+.wp-single__details__title {
+  text-align: center;
+  color: #144DA0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Sitka Heading;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .wp-single__details__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .wp-single__details__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__title {
+    margin-bottom: 80px;
+  }
+}
+
+.wp-single__details__content {
+  max-width: 430px;
+  margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .wp-single__details__content {
+    max-width: 590px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__content {
+    max-width: 920px;
+  }
+}
+
+.wp-single__details__text {
+  font-family: BIZ UDP明朝,Sitka Heading;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__text {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.wp-single__details__textbox {
+  font-family: BIZ UDP明朝,Sitka Heading;
+  font-size: 16px;
+  color: #101841;
+  line-height: 1.875;
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__textbox {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+.wp-single__details__button a {
+  display: block;
+  background-color: #144DA0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #144b9e;
+}
+
+@media screen and (min-width: 600px) {
+  .wp-single__details__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: inherit;
+        flex-wrap: inherit;
+    max-width: 540px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .wp-single__details__buttons {
+    max-width: 745px;
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */
