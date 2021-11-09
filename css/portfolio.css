@@ -998,6 +998,7 @@ progress {
 
 .p-content--works {
   margin-top: 40px;
+  position: relative;
 }
 
 .p-content--works__title {
@@ -1208,11 +1209,11 @@ progress {
   }
 }
 
-.p-content--works--raisetech:hover .p-content--works--raisetech__mask {
+.post-60:hover .p-content--works--raisetech__mask {
   opacity: 1;
 }
 
-.p-content--works--hamburgermenu:hover .p-content--works--hamburgermenu__mask {
+.post-21:hover .p-content--works--raisetech__mask {
   opacity: 1;
 }
 

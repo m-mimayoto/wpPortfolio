@@ -1,5 +1,6 @@
 .p-content--works{
     margin-top: 40px;
+    position: relative;
 
     &__title{
         @include title;
@@ -51,10 +52,13 @@
         }
     }
 }
-.p-content--works--raisetech:hover .p-content--works--raisetech__mask{
+//.p-content--works:hover .p-content--works--raisetech__mask{
+   // opacity: 1;
+//}
+.post-60:hover .p-content--works--raisetech__mask{
     opacity: 1;
 }
-.p-content--works--hamburgermenu:hover .p-content--works--hamburgermenu__mask{
+.post-21:hover .p-content--works--raisetech__mask{
     opacity: 1;
 }
 
