@@ -17,7 +17,7 @@
     </haed>
     <body <?php body_class(); ?>>
     <header class="l-header--single">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h2 class="p-header__title--single"><?php bloginfo( 'name' ); ?><br><?php bloginfo( 'description' ); ?></h3></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h2 class="p-header__title--single"><?php echo esc_html(get_bloginfo('name')); ?><br><?php echo esc_html(get_bloginfo('description')); ?></h3></a>
         <div class="l-header__navblock"><!--右-->
             <!--ハンバーガーメニュー-->
             <div class="l-hamburgerbtn--close" style="display:block;">

@@ -14,9 +14,9 @@
                             <figure id="post-<?php the_ID(); ?>" <?php post_class('p-content--works'); ?>>
                                 <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail(); ?>
-                                <!--<div class="p-content--works--raisetech__mask">
+                                <div class="p-content--works--raisetech__mask">
                                     <figcaption class="p-content--works--raisetech__title"><? the_title(); ?><br>詳細</figcaption>
-                                </div>-->
+                                </div>
                                 <? the_category(); ?>
                                 </a>
                             </figure>
@@ -32,31 +32,31 @@
                     <p class="p-content--skills__subtitle">使用技術</p>
                     <div class="l-content__img--skills">
                         <figure class="p-content--skills--html">
-                            <img class="p-content--skills--html__img" src="<?php echo get_template_directory_uri(); ?>./img/html5-brands.svg" alt="html">
+                            <img class="p-content--skills--html__img" src="<?php echo esc_url(get_template_directory_uri().'/img/html5-brands.svg'); ?>" alt="html">
                             <figcaption class="p-content--skills--html__title">HTML</figcaption>
                         </figure>
                         <figure class="p-content--skills--css">
-                            <img class="p-content--skills--css__img" src="<?php echo get_template_directory_uri(); ?>./img/css3-alt-brands.svg" alt="css">
+                            <img class="p-content--skills--css__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/css3-alt-brands.svg'); ?>" alt="css">
                             <figcaption class="p-content--skills--css__title">CSS</figcaption>
                         </figure>
                         <figure class="p-content--skills--cssdesign">
-                            <img class="p-content--skills--cssdesign__img" src="<?php echo get_template_directory_uri(); ?>./img/file-code-solid.svg" alt="css設計">
+                            <img class="p-content--skills--cssdesign__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/file-code-solid.svg'); ?>" alt="css設計">
                             <figcaption class="p-content--skills--cssdesign__title">CSS設計</figcaption>
                         </figure>
                         <figure class="p-content--skills--sass">
-                            <img class="p-content--skills--sass__img" src="<?php echo get_template_directory_uri(); ?>./img/sass-brands.svg" alt="sass">
+                            <img class="p-content--skills--sass__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/sass-brands.svg'); ?>" alt="sass">
                             <figcaption class="p-content--skills--sass__title">Sass</figcaption>
                         </figure>
                         <figure class="p-content--skills--wordpress">
-                            <img class="p-content--skills--wordpress__img" src="<?php echo get_template_directory_uri(); ?>./img/wordpress-brands.svg" alt="WordPress">
+                            <img class="p-content--skills--wordpress__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/wordpress-brands.svg'); ?>" alt="WordPress">
                             <figcaption class="p-content--skills--wordpress__title">WordPress</figcaption>
                         </figure>
                         <figure class="p-content--skills--git">
-                            <img class="p-content--skills--git__img" src="<?php echo get_template_directory_uri(); ?>./img/github-brands.svg" alt="Git/Github">
+                            <img class="p-content--skills--git__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/github-brands.svg'); ?>" alt="Git/Github">
                             <figcaption class="p-content--skills--git__title">Git/Github</figcaption>
                         </figure>
                         <figure class="p-content--skills--js">
-                            <img class="p-content--skills--js__img" src="<?php echo get_template_directory_uri(); ?>./img/js-brands.svg" alt="javascript(jquery)">
+                            <img class="p-content--skills--js__img" src="<?php echo esc_url(get_template_directory_uri() .'/img/js-brands.svg'); ?>" alt="javascript(jquery)">
                             <figcaption class="p-content--skills--js__title">JavaScript<br>(jQuery)</figcaption>
                         </figure>
                     </div>
@@ -72,7 +72,7 @@
                     <h3 class="p-content--about__title">About</h3>
                     <p class="p-content--about__subtitle">自己紹介</p>
                     <div class="l-content--about">
-                        <img class="p-content--about__img"src="<?php echo get_template_directory_uri(); ?>./img/Profile.jpg" alt="自己紹介画像">
+                        <img class="p-content--about__img"src="<?php echo esc_url(get_template_directory_uri() .'/img/Profile.jpg'); ?>" alt="自己紹介画像">
                         <section class="p-content--about__profile">
                             <p>【Profile】</p>
                             <p>名前：MIYAMOTO　MANA</p>
@@ -113,7 +113,7 @@
                     <p class="p-content--contact__subtitle">お問い合わせ</p>
                     <p class="p-content--contact__text">下記、フォームからご連絡お願い致します。<br>お待ちしております。</p>
                     <button class="c-button--contact">
-                        <a href="<?php echo home_url('/contact/'); ?>"><p>お問い合わせフォーム</p></a>
+                        <a href="<?php echo esc_url(home_url('/contact/')); ?>"><p>お問い合わせフォーム</p></a>
                     </button>
                     <p class="p-content--contact__text">SNS・GitBashもぜひご覧ください。</p>
                     <div class="c-icon--contact">

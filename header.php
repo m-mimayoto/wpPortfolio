@@ -18,8 +18,8 @@
     <body <?php body_class(); ?>>
         <header class="l-header">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <h1 class="p-header__title"><?php bloginfo( 'name' ); ?></h1>
-            <p class="p-header__subtitle"><?php bloginfo( 'description' ); ?></p>
+            <h1 class="p-header__title"><?php echo esc_html(get_bloginfo('name')); ?></h1>
+            <p class="p-header__subtitle"><?php echo esc_html(get_bloginfo('description')); ?></p>
             </a>
 
             <!--<div class="l-header__navblock">右-->
