@@ -13,4 +13,5 @@
         </footer>
         <?php wp_footer(); ?>
         </body>
+        <?php wp_body_open(); ?>
     </html>
