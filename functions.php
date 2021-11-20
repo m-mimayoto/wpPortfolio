@@ -1,8 +1,14 @@
 <?php
-    add_theme_support( 'menus' );
+    //add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support('post-thumbnails');//アイキャッチ画像
     add_theme_support( 'automatic-feed-links' );
+    add_theme_support( "wp-block-styles" ) ;//(themecheck)
+    add_theme_support( "responsive-embeds" );//(themechek)
+    add_theme_support( "custom-logo");//(themecheck)
+    add_theme_support( "align-wide" );//(themecheck)
+    add_theme_support( "custom-background");//(themecheck)
+    add_theme_support( 'custom-header' );//(themecheck)
 
     register_nav_menus( array(
         'footer_nav' => esc_html__('footer navigation','portfolio'),
@@ -17,6 +23,12 @@
         wp_enqueue_script( 'script', get_template_directory_uri() . '/move.js', array(), '1.0.0', true );
     }
     add_action( 'wp_enqueue_scripts' , 'portfolio_script' );
+
+    function wpdocs_theme_add_editor_styles() {
+        add_editor_style( 'custom-editor-style.css' );
+    }
+    add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+    
 
 
     function portfolio_title( $title ) {

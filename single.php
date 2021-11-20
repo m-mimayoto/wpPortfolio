@@ -12,6 +12,7 @@
         </section>
 
             <?php the_content(); ?>
+            <div class="page-links"><?php wp_link_pages(); // 記事内ページャー ?></div>
             <?php endwhile; ?>
             <?php endif; ?>
         </div>

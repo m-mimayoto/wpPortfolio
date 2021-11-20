@@ -15,9 +15,9 @@
                                 <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail(); ?>
                                 <div class="p-content--works--raisetech__mask">
-                                    <figcaption class="p-content--works--raisetech__title"><? the_title(); ?><br>詳細</figcaption>
+                                    <figcaption class="p-content--works--raisetech__title"><?php the_title(); ?><br>詳細</figcaption>
                                 </div>
-                                <? the_category(); ?>
+                                <?php the_category(); ?>
                                 </a>
                             </figure>
                         </div>
@@ -72,7 +72,7 @@
                     <h3 class="p-content--about__title">About</h3>
                     <p class="p-content--about__subtitle">自己紹介</p>
                     <div class="l-content--about">
-                        <img class="p-content--about__img"src="<?php echo esc_url(get_template_directory_uri() .'/img/Profile.jpg'); ?>" alt="自己紹介画像">
+                        <img class="p-content--about__img"src="<?php echo esc_url(get_template_directory_uri() .'/img/Profile.png'); ?>" alt="自己紹介画像">
                         <section class="p-content--about__profile">
                             <p>【Profile】</p>
                             <p>名前：MIYAMOTO　MANA</p>
